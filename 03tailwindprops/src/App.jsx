@@ -2,13 +2,27 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Card from './components/Card'
+import Button from './components/Button'
 
-export default function App() {
+function App() {
+  const [count, setCount] = useState(0)
+  let myObj = {
+    username: "hitesh",
+    age: 21
+  }
+  let newArr = [1, 2, 3]
+
   return (
-    <div className="h-screen flex items-center justify-center bg-black">
-      <h1 className="text-4xl text-green-400 font-bold">
-        Tailwind Working 🚀
-      </h1>
-    </div>
+    <>
+      <h1 className='bg-green-400 text-black p-4 rounded-xl mb-4'>Tailwind test</h1>
+      <Card username="chaiaurcode" btnText="click me" />
+      <Card username="hitesh" />
+       <Button text="Save" color="bg-green-500" />
+      <Button text="Delete" color="bg-red-500" />
+
+    </>
   )
 }
+
+export default App
